@@ -45,7 +45,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <h2 className="fs-1 fw-bold my-5 text-warning">
+        <h2 className="fs-1 fw-bold my-5 text-ligth">
           ¡Página en desarrollo!
         </h2>
         <p>{statusMessage}</p>
