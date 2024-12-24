@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [statusMessage, setStatusMessage] = useState('Conectando al backend...');
+
+  const [count, setCount] = useState(0); const [statusMessage, setStatusMessage] = useState('Conectando al backend...');
 
   useEffect(() => {
     const checkBackendConnection = async () => {
@@ -13,7 +13,11 @@ function App() {
         const response = await fetch('https://spangle-wood-iberis.glitch.me/api/test');
         if (response.ok) {
           const data = await response.json();
-          setStatusMessage(data.message);
+          if (data.message) {
+            setStatusMessage(data.message);
+          } else {
+            setStatusMessage('Respuesta inesperada del backend.');
+          }
         } else {
           setStatusMessage('Error al conectar con el backend.');
         }
