@@ -17,17 +17,14 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
+      <div className="cardb">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <h2>
-          Página en desarrollo
+        <h2 className="fs-1 fw-bold my-5 text-danger">
+          ¡Página en desarrollo!
         </h2>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
