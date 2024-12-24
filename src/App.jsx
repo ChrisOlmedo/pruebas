@@ -7,20 +7,23 @@ function App() {
   const [count, setCount] = useState(0);
   const [statusMessage, setStatusMessage] = useState('Conectando al backend...');
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch('https://spangle-wood-iberis.glitch.me/api/test');
-      const data = await response.json();
-      console.log(data.message); // Debería imprimir "¡Hola desde el backend!"
-      setStatusMessage(data.message);
-    } catch (error) {
-      console.error('Error al comunicarse con el backend:', error);
-      setStatusMessage('No se pudo conectar al backend.');
-    }
-  };
-
   useEffect(() => {
-    fetchData();
+    const checkBackendConnection = async () => {
+      try {
+        const response = await fetch('https://spangle-wood-iberis.glitch.me/api/test');
+        if (response.ok) {
+          const data = await response.json();
+          setStatusMessage(data.message);
+        } else {
+          setStatusMessage('Error al conectar con el backend.');
+        }
+      } catch (error) {
+        console.error('Error al conectar con el backend:', error);
+        setStatusMessage('No se pudo conectar al backend.');
+      }
+    };
+
+    checkBackendConnection();
   }, []);
 
   return (
