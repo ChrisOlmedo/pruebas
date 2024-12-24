@@ -4,7 +4,24 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [statusMessage, setStatusMessage] = useState('Conectando al backend...');
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://spangle-wood-iberis.glitch.me/api/test');
+      const data = await response.json();
+      console.log(data.message); // Debería imprimir "¡Hola desde el backend!"
+      setStatusMessage(data.message);
+    } catch (error) {
+      console.error('Error al comunicarse con el backend:', error);
+      setStatusMessage('No se pudo conectar al backend.');
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -24,6 +41,7 @@ function App() {
         <h2 className="fs-1 fw-bold my-5 text-warning">
           ¡Página en desarrollo!
         </h2>
+        <p>{statusMessage}</p>
       </div>
     </>
   )
