@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './styles/App.css'
-import Header from './components/header.jsx'
+import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
     <>
       <div className="main-container">
         <Header />
-        <div className='react-container'>
+        <main className='react-container'>
           <div >
             <a href="https://vite.dev" target="_blank">
               <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -55,7 +55,7 @@ function App() {
             </h2>
             <p>{statusMessage}</p>
           </div>
-        </div>
+        </main>
         <Footer />
       </div>
     </>
