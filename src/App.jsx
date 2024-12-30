@@ -1,8 +1,10 @@
 import './styles/App.css'
 import React from 'react';
-import Footer from './components/Footer.jsx'
-import Header from './components/Header.jsx'
+import { Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer/Footer.jsx'
+import Header from './components/Header/Header.jsx'
 import Home from './pages/Home.jsx'
+import NoPage from './pages/NoPage.jsx'
 
 function App() {
 
@@ -11,7 +13,10 @@ function App() {
     <>
       <div className="main-container">
         <Header />
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
         <Footer />
       </div >
     </>
