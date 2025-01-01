@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import Logo from '../../assets/unservicio-white.svg';
 import Vite from '../../assets/vite.svg';
+import UnServicioLogo from '../UnServicio-logo/UnServicioLogo.jsx';
+
 const Header = () => {
     return (
         <header className="header">
             <div className="logo-container">
-                <Link to="/" className='logo-link'>
-                    <img src={Logo} alt="UnServicio" className="logo-unservicio" />
-                    <span class="logo-title">UnServicio</span>
+                <Link to="/" className='text-decoration-none'>
+                    <UnServicioLogo color="white" height="35px" />
                 </Link>
-
-
             </div>
             <div className="search-container">
                 <input type="text" placeholder="Buscar servicios..." className="search-input" />
@@ -27,4 +25,3 @@ const Header = () => {
 };
 
 export default Header;
-

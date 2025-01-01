@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import viteLogo from '../assets/vite.svg'
-import ConectDB from '../test/Test.jsx'
+import reactLogo from '../../assets/react.svg'
+import viteLogo from '../../assets/vite.svg'
+import ConectDB from '../../test/Test.jsx'
 
 function Home() {
 
@@ -9,7 +9,7 @@ function Home() {
 
     return (
         <>
-            <main className='react-container'>
+            <div className='react-container'>
                 <div >
                     <a href="https://vite.dev" target="_blank">
                         <img src={viteLogo} className="homelogo" alt="Vite logo" />
@@ -28,7 +28,7 @@ function Home() {
                     </h2>
                 </div>
                 <ConectDB />
-            </main >
+            </div >
         </>
     );
 }

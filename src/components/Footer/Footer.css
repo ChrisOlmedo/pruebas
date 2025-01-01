@@ -3,8 +3,16 @@
     padding: 35px;
     text-align: center;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-container p {
     font-size: 18px;
+}
+
+.footer-logo {
+    height: 35px;
+    margin-left: 7px;
 }
