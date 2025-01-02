@@ -3,6 +3,9 @@ import reactLogo from '../../assets/react.svg'
 import viteLogo from '../../assets/vite.svg'
 import ConectDB from '../../test/Test.jsx'
 
+import { MdWorkHistory } from "react-icons/md";
+
+
 function Home() {
 
     const [count, setCount] = useState(0);
@@ -24,9 +27,10 @@ function Home() {
                         count is {count}
                     </button>
                     <h2 className="fs-1 fw-bold my-5 text-ligth">
-                        ¡Página en desarrollo!
+                        ¡Página en desarrollo! <MdWorkHistory />
                     </h2>
                 </div>
+
                 <ConectDB />
             </div >
         </>

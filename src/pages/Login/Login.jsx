@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 //import { GoogleLogin } from 'react-google-login';
 
 const Login = () => {
@@ -13,8 +14,8 @@ const Login = () => {
     };*/
 
     return (
-        <div className="login-container">
-            <h2>Login</h2>
+        <div className="d-flex flex-column justify-content-center align-items-center bg-light vh-100 gap-3">
+            <h1>Login</h1>
             {/*<GoogleLogin
                 clientId="YOUR_GOOGLE_CLIENT_ID"
                 buttonText="Login with Google"
@@ -22,6 +23,7 @@ const Login = () => {
                 onFailure={handleLoginFailure}
                 cookiePolicy={'single_host_origin'}
             />*/}
+            <Link to="/" className="btn btn-primary">Regresar</Link>
         </div>
     );
 };

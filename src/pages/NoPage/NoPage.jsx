@@ -7,7 +7,7 @@ const NoPage = () => {
             <div className="wrapper">
                 <div className="landing-page">
                     <h1> 404 Error.</h1>
-                    <p> We can't find the page you're looking for.</p>
+                    <p> No hay nada por aquí</p>
                 </div>
             </div>
         </div>
