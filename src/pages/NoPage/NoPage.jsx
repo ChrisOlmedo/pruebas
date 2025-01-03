@@ -1,13 +1,20 @@
 import React from 'react';
 import './NoPage.css';
+import { TbError404 } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 
 const NoPage = () => {
     return (
         <div className="no-page">
             <div className="wrapper">
                 <div className="landing-page">
-                    <h1> 404 Error.</h1>
-                    <p> No hay nada por aquí</p>
+                    <TbError404 size={"450"} color={"#000"} />
+                    <h1> Page Not Found</h1>
+                    <Link to="/" className='text-decoration-none'>
+                        <button type="button" class="btn btn-primary">
+                            Go Home
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

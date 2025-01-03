@@ -23,7 +23,7 @@ function Home() {
                 </div>
                 <h1>Vite + React</h1>
                 <div className="cardb">
-                    <button onClick={() => setCount((count) => count + 1)}>
+                    <button className="react-counter" onClick={() => setCount((count) => count + 1)}>
                         count is {count}
                     </button>
                     <h2 className="fs-1 fw-bold my-5 text-ligth">

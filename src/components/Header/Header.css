@@ -4,6 +4,7 @@
     left: 0;
     height: 60px;
     width: 100%;
+    z-index: 1000;
 }
 
 .header-space {
@@ -22,15 +23,16 @@
 }
 
 .header-bottom {
-    width: 20%;
-    background-color: rgba(0, 0, 0, 0.5);
     height: 30px;
-    border-radius: 0 0 10px 10px;
+    display: inline-block;
 }
 
 .header-bottom-container {
-    margin-left: 50px;
+    height: 100%;
+    padding: 0 50px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 10px 0;
     display: flex;
     align-items: center;
 }
@@ -40,6 +42,12 @@
     .header-container {
         padding: 0 30px;
     }
+
+    .search-container {
+        padding: 0 30px;
+    }
+
+
 }
 
 .logo-container {
@@ -65,6 +73,7 @@
 
 .search-container {
     flex: 1;
+    padding: 0 30px;
 }
 
 .search-form {

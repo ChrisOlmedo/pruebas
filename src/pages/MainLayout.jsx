@@ -5,11 +5,10 @@ import Header from '../components/Header/Header.jsx';
 
 const MainLayout = () => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     return (
         <div className="main-container">
-            <Header isLoggedIn={isLoggedIn} />
+            <Header />
             <main>
                 <Outlet />
             </main>

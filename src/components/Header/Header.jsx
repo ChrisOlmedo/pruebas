@@ -36,7 +36,7 @@ const Header = () => {
                 <div className="header-container">
                     <div className="logo-container">
                         <Link to="/" className='text-decoration-none'>
-                            <UnServicioLogo color="white" height="35px" />
+                            <UnServicioLogo color={"white"} height={"35px"} />
                         </Link>
                     </div>
                     <div className="search-container">
@@ -53,16 +53,16 @@ const Header = () => {
                                 <IoPersonCircleSharp color="white" size={"35px"} />
                             </Link>
                         ) : (
-                            <Link to="/login" onClick={handleLogin} className='text-decoration-none text-white login-container'>
+                            <Link to="/login" onClick={handleLogin} className='text-white login-container'>
                                 <IoLogIn color="white" size={"35px"} />
-                                <span >Ingresar</span>
+                                Ingresar
                             </Link>
                         )}
                     </div>
                 </div>
                 <div className="header-bottom">
                     <div className="header-bottom-container">
-                        <h6>Tu ubicación</h6>
+                        <span>Tu ubicación</span>
                     </div>
                 </div>
             </header>
