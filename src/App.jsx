@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="account" element={<AccountLayout />}>
-            <Route path="profile" element={<Profile />} />
+            <Route path="profile" index element={<Profile />} />
             <Route path="settings" element={<Settings />} />
           </Route>
         </Route>

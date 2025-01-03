@@ -1,6 +1,13 @@
 import React from 'react';
 
 const Settings = () => {
+
+    const repeatWord = (word, times) => {
+        return word.repeat(times);
+    };
+
+    const repeatedString = repeatWord('Lorem impsum', 1000);
+
     return (
         <div>
             <h1>Account Settings</h1>
@@ -18,6 +25,7 @@ const Settings = () => {
                     <input type="password" id="password" name="password" />
                 </div>
                 <button type="submit">Save Changes</button>
+                <p>{repeatedString}</p>
             </form>
         </div>
     );
